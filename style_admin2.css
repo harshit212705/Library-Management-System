@@ -1,0 +1,221 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #060c21;
+    font-family: cursive;
+}  
+
+.sidenav2 {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align:center;
+  }
+  
+  .sidenav2 a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  
+  }
+  
+  .sidenav2 a:hover{
+    color: #f1f1f1;
+  }
+  
+  .sidenav2 .closebtn2 {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    border: 2px solid white;
+    border-radius: 2px;
+    padding: 10px;
+    color: white;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav2 {padding-top: 15px;}
+    .sidenav2 a {font-size: 18px;}
+  }
+  
+  
+  .sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .sidenav a {
+    padding: 6px 6px 6px 32px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    margin-right: 40px;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    padding: 5px 20px;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    transition: 0.5s;
+  }
+  
+  .sidenav a:hover {
+    
+    transform: translateX(40px);
+  }
+  
+  .main {
+    margin-left: 200px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+.container
+{
+    position: relative;
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px,1fr));
+    grid-template-rows: auto;
+    grid-gap: 0 40px;
+}
+.container .box
+{
+    position: relative;
+    height: 400px;
+    margin-top: 100px;
+    margin-right: 20px;
+    margin-left: 80px;
+    background: #060c21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+}
+.container .box:before
+{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    transform: skew(2deg,2deg);
+    z-index: -1;
+}
+.container .box:nth-child(1):before
+{
+    background: linear-gradient(315deg,#ff0057,#e64a19);
+}
+.container .box:nth-child(2):before
+{
+    background: linear-gradient(315deg,#89ff00,#00bcd4);
+}
+.container .box:nth-child(3):before
+{
+    background: linear-gradient(315deg,#e91e63,#5d02ff);
+}
+.container .box:nth-child(4):before
+{
+    background: linear-gradient(315deg,#ff0000,#ffc107);
+}
+.container .box:after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.05);
+    pointer-events: none;
+}
+.content
+{
+    position: relative;
+    padding: 20px;
+    transform: translateY(40px);
+}
+.content h2
+{
+    position: absolute;
+    top: -60px;
+    right: 20px;
+    margin: 0;
+    padding: 0px;
+    font-size: 10em;
+    color: rgba(225, 215, 205, .05);
+    transition: 0.5s;
+}
+.box:hover .content h2
+{
+   top: -140px;
+}
+.box .content h3
+{
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+}
+.box .content p
+{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 16px;
+}
+.box .content a
+{
+    position: relative;
+    margin: 20px 0 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 1px solid #fff;
+    display: inline-block;
+    color: #fff;
+    transition: 0.5s;
+    transform: translateY(-40px);
+    opacity: 0;
+    visibility: hidden;
+}
+.box:hover .content a
+{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+.box .content a:hover
+{
+    color: #000;
+    background: #fff;
+}
